@@ -1,5 +1,6 @@
 body {
   margin: auto 0;
+  font-family: Arial;
 }
 
 .zone {
@@ -25,7 +26,19 @@ body {
     inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
 }
 
+.box:hover {
+  -webkit-transform: rotate(-7deg);
+  -moz-transform: rotate(-7deg);
+  -o-transform: rotate(-7deg);
+  transform: rotate(-7deg);
+}
+
 /* NAV */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 .main-nav {
   display: flex;
   list-style: none;
@@ -59,6 +72,11 @@ a {
   align-items: center;
   justify-content: center;
   height: 50vh;
+}
+
+.cover {
+  height: auto;
+  width: 30rem;
 }
 
 /* GRID */
