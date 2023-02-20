@@ -28,8 +28,20 @@ var newsFeed = [
 var userNamePrompt = prompt("What's your username?");
 var passwordPrompt = prompt("What's your password?");
 
-function signIn(user, pass) {
-  if (user === database[0].username && pass === database[0].password) {
+function isUserValid(username, password) {
+  for (var i = 0; i < database.length; i++) {
+    if (
+      database[i].username === username &&
+      database[i].password === password
+    ) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function signIn(username, password) {
+  if (isUserValid(username, password)) {
     console.log(newsFeed);
   } else {
     alert("Sorry, wrong username and password!");
@@ -73,12 +85,24 @@ var toDos = [
   "eat healthy",
 ];
 
+var toDosLength = toDos.length;
+
 for (var i = 0; i < toDos.length; i++) {
   console.log(toDos[i]);
 }
 
-var counterOne = 0;
-while (counterOne < 10) {
-  console.log(counterOne);
-  counterOne++;
+toDos.forEach(function (i) {
+  console.log(i);
+});
+
+var counterOne = 10;
+while (counterOne > 10) {
+  console.log("while", counterOne);
+  counterOne--;
 }
+
+var counterTwo = 10;
+do {
+  console.log("do while", counterTwo);
+  counterTwo--;
+} while (counterTwo > 10);
