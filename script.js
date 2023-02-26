@@ -40,13 +40,13 @@ function isUserValid(username, password) {
   return false;
 }
 
-function signIn(username, password) {
-  if (isUserValid(username, password)) {
-    console.log(newsFeed);
-  } else {
-    alert("Sorry, wrong username and password!");
-  }
-}
+// function signIn(username, password) {
+//   if (isUserValid(username, password)) {
+//     console.log(newsFeed);
+//   } else {
+//     alert("Sorry, wrong username and password!");
+//   }
+// }
 
 signIn(userNamePrompt, passwordPrompt);
 
